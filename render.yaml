@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: binance-quant-dashboard
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app_dashboard_fix22:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13
+      - key: BINANCE_API_KEY
+        sync: false
+      - key: BINANCE_API_SECRET
+        sync: false
+      - key: TWELVE_API_KEY
+        sync: false
