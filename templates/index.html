@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top15 — Dashboard (fix21)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script defer src="/static/dashboard.js"></script>
+</head>
+<body class="bg-slate-50">
+  <div class="max-w-[1600px] mx-auto p-4">
+    <header class="mb-3">
+      <h1 class="text-2xl font-extrabold">🔥 Top15 USDT — Liquidity + Spread + Pressure + ML Timer (fix21)</h1>
+      <p class="text-gray-600 text-sm">واجهة fix20 — شريط Market Summary ثابت — تحديث كل <b>3</b> ثوانٍ.</p>
+      <div id="summary" class="mt-2 rounded-lg border px-3 py-2 bg-gray-100 text-sm">
+        <div class="font-semibold">📊 Market Summary</div>
+        <div class="flex flex-wrap gap-3 items-center mt-1 text-[13px]">
+          <span id="sum-trend" class="px-2 py-0.5 rounded bg-gray-200">Trend: —</span>
+          <span id="sum-conf" class="px-2 py-0.5 rounded bg-gray-200">Avg Confidence: —</span>
+          <span id="sum-liq" class="px-2 py-0.5 rounded bg-gray-200">Liquidity Bias: —</span>
+          <span id="sum-spread" class="px-2 py-0.5 rounded bg-gray-200">Avg Spread: —</span>
+          <span id="sum-press" class="px-2 py-0.5 rounded bg-gray-200">Pressure: —</span>
+        </div>
+        <div id="sum-ts" class="text-[11px] text-gray-500 mt-1">—</div>
+      </div>
+      <div id="ts" class="text-xs text-gray-500 mt-1">—</div>
+    </header>
+
+    <section class="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6" id="grid"></section>
+
+    <footer class="text-[11px] text-gray-400 mt-6">
+      نموذج تعليمي — ليست نصيحة استثمارية.
+    </footer>
+  </div>
+</body>
+</html>
